@@ -171,6 +171,7 @@
     <Text Include="second.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.MD" />
     <None Include="tests.bat" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

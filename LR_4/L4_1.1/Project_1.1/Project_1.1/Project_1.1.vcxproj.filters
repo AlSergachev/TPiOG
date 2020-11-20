@@ -34,5 +34,8 @@
     <None Include="tests.bat">
       <Filter>Файлы ресурсов</Filter>
     </None>
+    <None Include="README.MD">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
   </ItemGroup>
 </Project>
