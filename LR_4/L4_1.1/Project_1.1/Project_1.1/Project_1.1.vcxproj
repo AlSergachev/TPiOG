@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d9f39f26-e013-43be-b573-c5ad07b497bc}</ProjectGuid>
-    <RootNamespace>Project1</RootNamespace>
+    <ProjectGuid>{57383eee-5263-4477-8fe0-0b0ce96eb389}</ProjectGuid>
+    <RootNamespace>Project11</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -95,6 +95,8 @@
     </Link>
     <PostBuildEvent>
       <Command>tests.bat "$(TargetPath)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
       <Message>Unit test</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -133,6 +135,8 @@
     </Link>
     <PostBuildEvent>
       <Command>tests.bat "$(TargetPath)"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
       <Message>Unit test</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -162,9 +166,9 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Copy.txt" />
     <Text Include="first.txt" />
     <Text Include="second.txt" />
-    <Text Include="Copy.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="tests.bat" />
