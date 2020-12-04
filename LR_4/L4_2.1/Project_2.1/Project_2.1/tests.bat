@@ -32,6 +32,10 @@ echo "Test 6 Passed"
 fc result.txt 164.txt || goto err
 echo "Test 7 Passed"
 
+::Test 8 - ѕроверка при нецелочисленном аргументе
+%MyProgram% 1.7 && goto err
+echo "Test 8 Passed"
+
 echo "All tests passed successfully"
 exit /B 0
 
