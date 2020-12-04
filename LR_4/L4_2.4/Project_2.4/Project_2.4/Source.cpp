@@ -48,9 +48,10 @@ int main(int count, char* array[])
     
     for (int j = 1; j <= two.size(); j++)
     {
-        //cout << two.at(two.size() - j);
+        cout << two.at(two.size() - j);
         outf << two.at(two.size() - j);
     }
+    cout << endl;
 
     outf.close();
     
