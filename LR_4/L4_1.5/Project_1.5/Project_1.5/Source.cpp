@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <cstdlib> 
 
 using namespace std;
 
@@ -30,11 +29,10 @@ int main(int count, char* array[])
             return 1;
         }
 
-        while (inf)
+        char ch(0);
+        while (inf.get(ch))
         {
-            string strInput;
-            getline(inf, strInput);
-            outf << strInput << endl;
+            outf << ch;
         }
         
         inf.close();       

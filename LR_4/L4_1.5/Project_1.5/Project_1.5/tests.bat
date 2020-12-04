@@ -14,7 +14,7 @@ echo "Test 2 Passed"
 %MyProgram% f2.txt ready.txt && goto err
 echo "Test 3 Passed"
 
-::Test 4 - Проверка корректоной работы программы
+::Test 4 - Проверка корректоной работы программы с текстровыми файлами
 %MyProgram% f1.txt f2.txt f3.txt ready.txt|| goto err
 echo "Test 4 Passed"
 
@@ -34,6 +34,10 @@ echo "Test 7 Passed"
 %MyProgram% f1.txt f2.txt f3.txt ready.txt || goto err
 fc empty.txt ready.txt && goto err
 echo "Test 8 Passed"
+
+::Test 9 - Проверка корректоной работы программы c бинарными файлами
+%MyProgram% bin_file_1.exe bin_file_2.exe ready.txt|| goto err
+echo "Test 9 Passed"
 
 echo "All tests passed successfully"
 exit /B 0
