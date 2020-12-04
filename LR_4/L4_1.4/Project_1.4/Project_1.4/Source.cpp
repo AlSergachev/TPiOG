@@ -1,8 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <cstdlib>
-#include <vector>
+
+//tests.bat "$(TargetPath)"
 
 using namespace std;
 
@@ -48,32 +48,30 @@ int main(int count, char* array[])
     }
 
     string replace_str = array[4];
-    vector <int> count_str;
+    int search_str_length = search_str.length();
 
     int j = 0;
     while (inf)
     {
-        j++;
         string str;
         getline(inf, str);
 
-        if (str == search_str)
+        int it = str.find(search_str, 0);
+        while (it != string::npos)
         {
-            outf << replace_str << endl;
-            count_str.push_back(j);
+            j++;
+            str.replace(it, search_str_length, replace_str);
+            it = str.find(search_str, it);
         }
-        else
-        {
-            outf << str << endl;
-        }
+        outf << str << endl;
     }
 
     inf.close();
     outf.close();
 
-    if (count_str.size() != 0)
+    if (j != 0)
     {
-        cout << "Number of modified rows " << count_str.size() << "\n";
+        cout << "Number of modified rows " << j << "\n";
     }
     else
     {

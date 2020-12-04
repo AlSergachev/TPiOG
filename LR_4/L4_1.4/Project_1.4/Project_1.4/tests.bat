@@ -19,7 +19,7 @@ echo "Test 3 Passed"
 echo "Test 4 Passed"
 
 ::Test 5 - Проверка корректоной работы программы
-%MyProgram% file1.txt file2.txt "Winter, winter." "Summer, summer." || goto err
+%MyProgram% file1.txt file2.txt "winter." "summer." || goto err
 echo "Test 5 Passed"
 
 ::Test 6 - Проверка при одном аргументе с именнем несуществующего файла
